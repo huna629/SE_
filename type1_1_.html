@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<!--
+	Spatial by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Type 1 - X linked disease</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<h1><strong><a href="index.html">Predict Analysis</a></strong> by Group 5</h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="type1.html">Type 1 - X linked</a></li>
+						<li><a href="type2.html">Type 2</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="container">
+
+					<header class="major special">
+						<h2>Type 1 - X linked</h2>
+						<p>Calculate the probability of having x-linked disease</p>
+					</header>
+
+					<a href="#" class="image fit"><img src="images/x-link.jpg" alt="" /></a>
+					
+					
+					<h4>Questionnaire</h4>
+					<form action = "http://localhost/software%20engineering/handleform.php" method="post">
+					  <!--The names and ids assigned are VERY important
+						  having different names for the same y/n button will
+						  not cause the button to only select yes or no and the user 
+						  would be able to simulatnesoly select both
+					  -->
+
+  					  <p>Please select your gender</p>
+					  <input type="radio" id="Male" name="gender" value="M">
+					  <label for="Male">Male</label><br>
+					  <input type="radio" id="Female" name="gender" value="F">
+					  <label for="Female">Female</label><br>
+				  	<br>
+				  	<br>
+					  <p>Has your mom ever had the disease?</p>
+					  <input type="radio" id="mom_yes" name="mom_y/n" value="1"><!--"yes_no" checked>-->
+					  <label for="mom_yes">Yes</label><br>
+					  <input type="radio" id="mom_no" name="mom_y/n" value="0">
+					  <label for="mom_no">No</label><br>
+					<br>
+					<br>
+					  <p>Has your dad ever had the disease?</p>
+					  <input type="radio" id="dad_yes" name="dad_y/n" value="1"><!--"yes_no" checked>-->
+					  <label for="dad_yes">Yes</label><br>
+					  <input type="radio" id = "dad_no" name="dad_y/n" value="0">
+					  <label for="dad_no">No</label>
+				  	<br>
+				  	<br>
+					  <p>Has your sibling ever had the disease?</p>
+					  <input type="radio" id="sibling_yes" name="sibling_y/n" value="1">
+					  <label for="sibling_yes">Yes</label><br>
+					  <input type="radio" id="sibling_no" name="sibling_y/n" value="0">
+					  <label for="sibling_no">No</label>
+					<br>
+					<br>
+					<input type="submit" value="Submit">
+					</form>
+				</div>
+				
+		
+
+			</section>
+			<!--
+			php code about displaying 
+			the $_POST variable from handleForm.php
+			-->
+			
+			<?php
+			
+            include "handleForm.php";
+			
+			echo $_POST;
+			
+			?>
+			
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
